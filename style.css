@@ -8,9 +8,11 @@
 
     --cor0: #292929;
     --cor1: #323233;
-    --cor2: #a2e243;
-    --cor3: #41c206;
+    --cor2: #383a387e;
+    --cor3: #252525d3;
     --cor4: #008000; 
+    --cor5: #ffff;
+    --cor6: #f33e08f8;
     --font: "Montserrat", sans-serif;
 }
 body{
@@ -19,7 +21,7 @@ body{
 }
 
 h1{
-    color: rgb(230, 230, 240);
+    color: var(--cor5);
     margin: 8px;
     padding: 2px;
     text-align: center;
@@ -27,31 +29,9 @@ h1{
     font-weight:bolder;
     text-shadow: 0.5px 0.5px 3px rgba(0, 0, 0, 0.28);
 }
-form > p {
-    color: wheat;
-    font-size: small;
-    font-weight: 600;
-    font-family: var(--font);
-    left: 58%;
-    width: 45px;
-    margin: 4px;
-    position: relative;
-}
-form > label{
-    font-family: var(--font);
-    font-size: 1em;
-    font-weight: 600 ;
-    color: #ffff;
-}
-h3{
-    background-color: rgba(255, 255, 255, 0.954);
-    width: auto;
-    height: auto;
-    margin: 0px auto;
-    border-radius: 4px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.411);
-}
+
 form{
+    height: 130px;
     width: 360px;
     padding: 12px;
     margin: 100px auto;
@@ -59,33 +39,37 @@ form{
     text-align: center;
     border-radius: 10px 10px 0px 0px;
     background-color: var(--cor1);
-    box-shadow: 0.5px 0.5px 7px rgba(206, 241, 206, 0.219);
+    box-shadow: 0.5px 0.5px 10px rgba(15, 19, 15, 0.466) ;
 }
+
 #inSenha{
-    padding: 7px;
-    border-radius: 4px;
-    box-shadow: 1px 0.5px 5px rgba(128, 128, 128, 0.553);
+    outline: 0; 
+    padding: 10px;
+    color: var(--cor5);
+    border-radius: 3px;
+    border: solid 2px  rgb(12, 12, 12, 0.58) ;
+    background-color: rgb(12, 12, 12, 0.58);;
 }
-#btnVerificar:hover{
-    color: var(--cor3);
+#btnMostrar:hover{
+    transition: 0.5s;
+    color: var(--cor5);
     background-color: var(--cor2);
 }
-#btnVerificar{
-    width: 70px;
-    height: 29px;
-    padding: 7px;
+#btnMostrar{
+    width: 80px;
+    padding: 10px;
     font-weight: 600;
-    color: #ffff;
-    border-style: hidden;
-    background-color: var(--cor3);
-    box-shadow: 1px 0.5px 5px rgba(128, 128, 128, 0.536);
+    color: var(--cor5);
+    border-radius: 3px;
+    border: solid 2px  rgb(12, 12, 12, 0.58) ;
+    background-color: rgb(12, 12, 12, 0.58);;
 }
 #regras{
     width: 360px;
     margin: auto;
     padding: 10px;
     border-radius:  0px 0px 10px 10px;
-    box-shadow: 0.5px 0.5px 7px rgba(206, 241, 206, 0.219);
+    box-shadow: 0.5px 0.5px 10px rgba(15, 19, 15, 0.466) ;
     background-color: var(--cor1);
 
 }
@@ -96,8 +80,8 @@ form{
 
     font-family: var(--font);
     font-weight: 500;
-    font-size: small;    
+    font-size: 0.4em;    
     text-align: left;
-    color: #f33e08f8;
+    color: var(--cor6);
 
 }

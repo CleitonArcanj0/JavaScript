@@ -1,4 +1,5 @@
 const frm =  window.document.querySelector("form")
+const btn = window.document.querySelector("button")
 
 function contador(campo){
     const senha = campo.value
@@ -8,11 +9,7 @@ function contador(campo){
     const temEspeciais = senha.match(/\W/g)
     
 
-    window.document.getElementById("contador").innerText = senha.length;
-    
-    if(senha.length == 15){
-        document.querySelector("#pContador").style.color = "red"
-    }
+   
 
     if(senha.length > 8){
         document.getElementById("list_regra1").style.color = "#48f115f8"
@@ -45,4 +42,19 @@ function contador(campo){
     }else{
         document.getElementById("list_regra5").style.color = "#48f115f8"
     }
+}
+
+btn.addEventListener("click", (e)=>{
+    mostrarSenha(e)
+})
+
+function mostrarSenha(e){
+    let input = document.querySelector("#inSenha")
+    if(input.getAttribute('type') == 'password'){
+        input.setAttribute('type', 'text')
+    }else{
+        input.setAttribute('type', 'password')
+    }
+    
+    e.preventDefault()
 }

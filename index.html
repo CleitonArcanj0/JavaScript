@@ -10,12 +10,11 @@
 <body>
     <form>
         <h1>Força da senha</h1>
-        <label for="Senha">Senha:</label>
-        <input type="password" id="inSenha" oninput="contador(this)" maxlength="15" >
 
-        <input type="submit" value="Verificar" id="btnVerificar" >
+        <input type="password" id="inSenha"  placeholder="Senha" oninput="contador(this)" maxlength="15" >
 
-        <p id="pContador"><span id="contador">0</span>/15</p>
+        <button id="btnMostrar" >Mostrar</button>
+        
     </form>
     <div id="regras">
         <ul>
