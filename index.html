@@ -10,19 +10,16 @@
 <body>
     <form>
         <h1>Força da senha</h1>
-
         <input type="password" id="inSenha"  placeholder="Senha" oninput="contador(this)" maxlength="15" >
-
-        <button id="btnMostrar" >Mostrar</button>
-        
+        <button id="btnMostrar" >Mostrar</button>    
     </form>
     <div id="regras">
         <ul>
-            <li id="list_regra1">A senha deve possui 8 a 15 caracteres.</li>
-            <li id="list_regra2">A senha tem que ter no mínimo 1 número.</li>
-            <li id="list_regra3">A senha tem que ter no mínimo 1 letra minúscula.</li>
-            <li id="list_regra4">A senha tem que ter no mínimo 2 letra maiúscula.</li>
-            <li id="list_regra5">A senha tem que ter no mínimo 1 símbolo.</li>
+            <li id="list_regra1" class="list_erro">A senha deve possui 8 a 15 caracteres.</li>
+            <li id="list_regra2" class="list_erro">A senha tem que ter no mínimo 1 número.</li>
+            <li id="list_regra3" class="list_erro">A senha tem que ter no mínimo 1 letra minúscula.</li>
+            <li id="list_regra4" class="list_erro">A senha tem que ter no mínimo 2 letra maiúscula.</li>
+            <li id="list_regra5" class="list_erro">A senha tem que ter no mínimo 1 símbolo.</li>
         </ul>
     </div>
     <script src="js.js"></script>

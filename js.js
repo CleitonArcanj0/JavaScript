@@ -1,5 +1,14 @@
 const frm =  window.document.querySelector("form")
 const btn = window.document.querySelector("button")
+const list = window.document.querySelector(".list_erro")
+
+/*Capturando os elementos pelo seu ID para alterar a cor dos elementos da lista dinamicamente atráves do atributo class, 
+evitando que os outros elemento da lista sejam afetados antes que a validação ocorra*/
+const list_senha = window.document.querySelector("#list_regra1")
+const list_num = window.document.querySelector("#list_regra2")
+const list_minus = window.document.querySelector("#list_regra3")
+const list_maius = window.document.querySelector("#list_regra4")
+const list_simb = window.document.querySelector("#list_regra5")
 
 function contador(campo){
     const senha = campo.value
@@ -7,40 +16,48 @@ function contador(campo){
     const temMinus = senha.match(/[a-z]/g)
     const temMaius = senha.match(/[A-Z]/g)
     const temEspeciais = senha.match(/\W/g)
-    
 
-   
 
-    if(senha.length > 8){
-        document.getElementById("list_regra1").style.color = "#48f115f8"
+    if(senha.length >= 8){
+        list_senha.classList.remove("list_erro");
+        list_senha.classList.add("list_success");
     } else{
-        document.getElementById("list_regra1").style.color = '#f33e08f8'
+        list_senha.classList.remove("list_success");
+        list_senha.classList.add("list_erro");
     }
 
-    if(temNum == null){
-        document.getElementById("list_regra2").style.color = '#f33e08f8'
+    if(!(temNum == null)){
+        list_num.classList.remove("list_erro");
+        list_num.classList.add("list_success");
     }else{
-        document.getElementById("list_regra2").style.color = "#48f115f8"
+        list_num.classList.remove("list_success");
+        list_num.classList.add("list_erro");
     }
     
-    if(temMinus == null){
-        document.getElementById("list_regra3").style.color = '#f33e08f8'
+    if(!(temMinus == null)){
+        list_minus.classList.remove("list_erro");
+        list_minus.classList.add("list_success");
     }else{
-         document.getElementById("list_regra3").style.color = "#48f115f8"
+        list_minus.classList.remove("list_success");
+        list_minus.classList.add("list_erro");
     }
 
 
-    if(temMaius == null || temMaius.length < 2){
-        document.getElementById("list_regra4").style.color = '#f33e08f8'
+    if(!(temMaius == null || temMaius.length < 2)){
+        list_maius.classList.remove("list_erro");
+        list_maius.classList.add("list_success");
 
     }else{
-        document.getElementById("list_regra4").style.color = "#48f115f8"
+        list_maius.classList.remove("list_success");
+        list_maius.classList.add("list_erro");
     }
 
-    if(temEspeciais == null){
-        document.getElementById("list_regra5").style.color = '#f33e08f8'   
+    if(!(temEspeciais == null)){
+        list_simb.classList.remove("list_erro");
+        list_simb.classList.add("list_success");  
     }else{
-        document.getElementById("list_regra5").style.color = "#48f115f8"
+        list_simb.classList.remove("list_success");
+        list_simb.classList.add("list_erro");
     }
 }
 
